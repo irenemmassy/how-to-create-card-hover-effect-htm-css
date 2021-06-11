@@ -1,0 +1,82 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #08160f;
+  width: 100%;
+  height: 100vh;
+}
+.box {
+  width: 320px;
+  background-color: #fcfcfc;
+  text-align: center;
+  font-family: serif;
+  border-radius: 20px;
+  overflow: hidden;
+  filter: blur(10px);
+  opacity: 0.5;
+}
+.circle {
+  width: 100%;
+  height: 200px;
+  background-color: #77019b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-family: monospace;
+  font-weight: bold;
+  color: #fff;
+  clip-path: circle(65% at 50% 9%);
+}
+.box p {
+  padding: 0 30px;
+  text-align: justify;
+  font-size: 15px;
+  line-height: 29px;
+}
+.box button {
+  width: 160px;
+  height: 50px;
+  background-color: white;
+  margin: 30px 0;
+  border-radius: 30px;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 17px;
+  border: 0;
+}
+.box:nth-child(2) .circle {
+  background-color: #e98c00;
+}
+.box:nth-child(3) .circle {
+  background-color: #57d105;
+}
+.box:hover {
+  filter: blur(0px);
+  opacity: 1;
+  transition: 0.5s;
+  transform: scale(1.1);
+  box-shadow: -15px 22px 23px 0px rgba(0, 0, 0, 0.75);
+}
+.box:hover .circle {
+  clip-path: polygon(0 0, 100% 0, 78% 100%, 19% 100%);
+}
+.box:hover button {
+  color: white;
+  transition: 0.5s;
+  box-shadow: 26px 39px 24px 0px rgba(148, 148, 148, 0.75);
+}
+.box:nth-child(1):hover button {
+  background-color: #77019b;
+}
+.box:nth-child(2):hover button {
+  background-color: #e98c00;
+}
+.box:nth-child(3):hover button {
+  background-color: #57d105;
+}
